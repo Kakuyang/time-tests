@@ -10,7 +10,9 @@ def time_range(start_time, end_time, number_of_intervals=1, gap_between_interval
         1 / number_of_intervals - 1
     )
     if end_time < start_time:
-        raise ValueError("This time range is backwards")
+        raise ValueError(
+            "This time range is backwards - start time must be before end time."
+        )
     sec_range = [
         (
             start_time_s
